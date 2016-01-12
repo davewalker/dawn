@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate",
+  "name": "gravitaco",
   "version": "1.0.0",
-  "description": "boilerplate",
+  "description": "gravitaco",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

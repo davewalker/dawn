@@ -1,0 +1,90 @@
+$header_colors: (white, $white) (gold, $gold) (grey, $grey);
+
+@mixin header_strikes {
+    @each $color_name, $color in $header_colors {
+        &.header--#{$color_name}:before {
+            background-color: #{$color};
+        }
+    }
+}
+
+
+h1, .alpha,
+h2, .beta,
+h3, .gamma,
+h4, .delta,
+h5, .epsilon,
+h6, .zeta {
+    font-weight: normal;
+    margin: 0 0 $base-spacing-unit;
+}
+
+h1,
+.alpha {
+    @include font-size(18px);
+    line-height: 1em;
+    letter-spacing: 0.25em;
+}
+
+h2,
+.beta {
+    @include font-size(24px);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.header--strikethrough {
+    display: inline-block;
+    position: relative;
+
+    &:before {
+        content: '';
+        margin-top: -1px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 3px;
+    }
+
+    @include header_strikes();
+}
+
+@each $color_name, $color in $header_colors {
+    .header--#{$color_name} {
+        color: #{$color};
+    }
+}
+
+p {
+    margin: 0 0 $base-spacing-unit;
+}
+
+
+/*-- Breakpoints --*/
+
+@include screen-bigger-than($tablet) {
+    h1,
+    .alpha {
+        @include font-size(22px);
+    }
+
+    h2,
+    .beta {
+        @include font-size(28px);
+    }
+}
+
+@include screen-bigger-than($desktop) {
+    h1,
+    .alpha {
+        @include font-size(26px);
+    }
+
+    h2,
+    .beta {
+        @include font-size(32px);
+    }
+}

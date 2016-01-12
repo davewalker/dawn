@@ -155,7 +155,7 @@ gulp.task('js-watch', ['jshint', 'build-js'], browserSync.reload);
 gulp.task('serve', ['build-bundle', 'jshint', 'build-js', 'build-plugins'], function() {
 
     browserSync.init({
-        proxy: "localhost:8888/boilerplate/"
+        proxy: "localhost:8888/gravitaco/"
     });
 
     gulp.watch([input.scss, 'src/components/**/*.scss'], ['build-bundle']);
