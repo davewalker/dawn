@@ -79,3 +79,20 @@
         @content;
     }
 }
+
+
+
+@include screen-bigger-than($tablet) {
+    .col-wrapper {
+        @include clearfix();
+
+        .col--two {
+            float: left;
+            width: 48.5%;
+        }
+
+        .col--last {
+            float: right;
+        }
+    }
+}
