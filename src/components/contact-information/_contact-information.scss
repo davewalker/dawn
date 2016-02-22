@@ -1,0 +1,21 @@
+.contact-introduction {
+    @include font-size(32px);
+    line-height: 1.25em;
+    letter-spacing: 0;
+}
+
+.contact-information {
+    color: $grey;
+    @include font-size(14px);
+}
+
+
+@include screen-bigger-than($tablet) {
+
+    .contact-introduction {
+        @include font-size(48px);
+        max-width: 55%;
+        width: 750px;
+    }
+
+}

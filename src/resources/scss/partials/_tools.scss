@@ -2,6 +2,46 @@
 Mini-mixins to priovide helper classes
 **/
 
+img {
+    max-width: 100%;
+
+    &.fluid {
+        display: block;
+    }
+}
+
 .no-bm {
     margin-bottom: 0;
+}
+
+.bm--x2 {
+    margin-bottom: $base-spacing-unit * 2;
+}
+
+.bm--x3 {
+    margin-bottom: $base-spacing-unit * 3;
+}
+
+.bm--half {
+    margin-bottom: $base-spacing-unit / 2;
+}
+
+.no-styling {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.mobile-visible {
+    @include screen-bigger-than($tablet) {
+        display: none !important;
+    }
+}
+
+
+.mobile-hidden {
+    @include screen-smaller-than($tablet) {
+        display: none !important;
+    }
 }

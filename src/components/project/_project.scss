@@ -1,0 +1,83 @@
+.project {
+    color: $light_grey;
+}
+
+.project__title,
+.project__subject {
+    font-family: "coranto-2-headline", "Georgia", Helvetica, Arial, sans-serif;
+    letter-spacing: 0;
+}
+
+.project__title {
+    @include font-size(30px);
+    line-height: 1em;
+}
+
+.project__subject {
+    @include font-size(30px);
+    margin: 1em 0;
+}
+
+.project__chapter {
+}
+
+.project__info {
+    padding-right: 40px;
+    position: relative;
+}
+
+.project__tooltip {
+    border: solid 2px $gold;
+    border-radius: 50%;
+    color: $white;
+    cursor: pointer;
+    @include font-size(12px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    width: 20px;
+}
+
+.project__detail {
+    display: none;
+}
+
+
+@include screen-bigger-than($tablet) {
+
+    .project__subject {
+        margin: 2em 0;
+    }
+
+    .project__chapter-title {
+        position: relative;
+
+        &:before {
+            border-right: solid .15em $gold;
+            color: $gold;
+            position: absolute;
+            content: '01';
+            top: 0;
+            height: 100%;
+            left: -50px;
+            width: 30px;
+        }
+    }
+
+    .project__detail {
+        display: block !important;
+    }
+
+
+}
+
+@include screen-bigger-than($desktop) {
+
+    .project__subject {
+        @include font-size(45px);
+    }
+
+}

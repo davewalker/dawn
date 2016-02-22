@@ -15,15 +15,30 @@ h3, .gamma,
 h4, .delta,
 h5, .epsilon,
 h6, .zeta {
+    color: $black;
     font-weight: normal;
     margin: 0 0 $base-spacing-unit;
+}
+
+
+h1, .alpha,
+h2, .beta {
+    font-family: "soleil", "Myriad Pro Regular", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+
+h3, .gamma,
+h4, .delta,
+h5, .epsilon,
+h6, .zeta {
+    font-family: "coranto-2-headline", "Georgia", Helvetica, Arial, sans-serif;
 }
 
 h1,
 .alpha {
     @include font-size(18px);
     line-height: 1em;
-    letter-spacing: 0.25em;
 }
 
 h2,
@@ -31,25 +46,33 @@ h2,
     @include font-size(24px);
 }
 
+.delta {
+    @include font-size(20px);
+}
+
+.section-heading {
+    @include font-size(12px);
+    font-family: "soleil", "Myriad Pro Regular", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    margin-bottom: 40px;
+}
+
 .uppercase {
     text-transform: uppercase;
+}
+
+.main-content__title {
+    font-family: "coranto-2-headline", "Georgia", Helvetica, Arial, sans-serif;
+    @include font-size(32px);
+    letter-spacing: 0;
+    margin-bottom: 1em;
 }
 
 .header--strikethrough {
     display: inline-block;
     position: relative;
-
-    &:before {
-        content: '';
-        margin-top: -1px;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        height: 3px;
-    }
-
-    @include header_strikes();
+    text-decoration: line-through;
 }
 
 @each $color_name, $color in $header_colors {
@@ -59,6 +82,7 @@ h2,
 }
 
 p {
+    line-height: 1.66em;
     margin: 0 0 $base-spacing-unit;
 }
 
@@ -75,6 +99,10 @@ p {
     .beta {
         @include font-size(28px);
     }
+
+    .main-content__title {
+        @include font-size(36px);
+    }
 }
 
 @include screen-bigger-than($desktop) {
@@ -86,5 +114,9 @@ p {
     h2,
     .beta {
         @include font-size(32px);
+    }
+
+    .main-content__title {
+        @include font-size(48px);
     }
 }

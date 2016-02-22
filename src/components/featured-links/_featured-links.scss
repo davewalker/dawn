@@ -2,8 +2,27 @@
 
 .featured-links {
     color: $grey;
+    margin-bottom: $base-spacing-unit * 4;
 }
 
 .featured-links__item {
-    margin-bottom: $base-spacing-unit;
+    @include font-size(14px);
+    margin-bottom: $base-spacing-unit * 1.5;
+
+    a {
+        transition: color ease-in .2s;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+.featured-links__header {
+    @include font-size(12px);
+    margin-bottom: $base-spacing-unit * 2;
+}
+
+.featured-links__title {
+    @include font-size(24px);
 }

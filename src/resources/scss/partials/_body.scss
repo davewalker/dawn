@@ -1,7 +1,6 @@
-
 body {
 	background: $white;
-	color: $black;
+	color: $light-grey;
 	font-family: $font-body;
 	margin: 0;
 	padding: 0;
@@ -14,15 +13,67 @@ a {
 
 
 .content {
+	background-color: $black;
+	box-sizing: border-box;
+    color: $white;
+    padding: $base-spacing-unit $base-spacing-unit * 2;
+}
+
+.main-content {
+	box-sizing: border-box;
+	padding: $base-spacing-unit * 2;
+}
+
+.main-content--flush {
+	padding: 0 !important;
+}
+
+blockquote {
+	color: $black;
+	font-family: "coranto-2-headline", "Georgia", Helvetica, Arial, sans-serif;
+	@include font-size(30px);
+	font-weight: 400;
+	margin: 1em 0;
+}
+
+.clearfix {
+	@include clearfix();
 }
 
 
 @include screen-bigger-than($tablet) {
 	.content {
 		float: left;
+	}
+
+	.main-content {
+		background-position: center !important;
+		background-size: cover !important;
+		float: right;
+	}
+
+	.content,
+	.main-content {
+		min-height: 100vh;
+		padding: $base-spacing-unit * 4;
 		width: 50%;
 	}
 
+	.content--wide {
+		width: 75%;
+	}
+
+	.main-content--narrow {
+		width: 25%;
+	}
+
+	.fixed-panel--l-only {
+		position: fixed;
+
+		&.main-content {
+			right: 0;
+		}
+	}
 }
 
 @include screen-bigger-than($desktop) {
@@ -31,5 +82,16 @@ a {
 		width: 45%;
 	}
 
+	.content--wide {
+		width: 70%;
+	}
+
+	.main-content {
+		width: 55%;
+	}
+
+	.main-content--narrow {
+		width: 30%;
+	}
 
 }

@@ -1,20 +1,24 @@
 /** Header **/
-
 $header_color: $white;
 
 .header {
-    border: solid 1px red;
+    background: $black;
     overflow: hidden;
+    position: relative;
+    z-index: 99;
 }
 
 .header__logo {
+    color: $white;
     float: left;
+    @include font-size(20px);
 }
 
 .header__burger {
+    cursor: pointer;
     float: right;
-    height: 22px;
-    width: 26px;
+    height: 20px;
+    width: 25px;
     position: relative;
 
     &:before,
@@ -47,14 +51,33 @@ $header_color: $white;
 
 .navigation {
     background-color: $black;
-    color: $header_color;
-    min-height: 100vh;
-    padding: $base-spacing-unit * 2;
+    margin-bottom: $base-spacing-unit * 2;
+    position: relative;
+}
+
+.navigation__opener {
+    @include font-size(14px);
+    line-height: 1.6em;
+    margin: 2em 0 0;
+}
+
+.navigation__dropdown {
+    background: $black;
+    display: none;
+    margin-top: 2em;
+}
+
+.navigation__dropdown-title {
+    @include font-size(12px);
 }
 
 .navigation__list {
-    border: solid 1px red;
     margin: 20px 0 0;
+}
+
+.navigation__item {
+    color: $white;
+    line-height: 2em;
 }
 
 
@@ -64,7 +87,31 @@ $header_color: $white;
 @include screen-bigger-than($tablet) {
 
     .navigation {
-        padding: 10%;
+        margin-bottom: $base-spacing-unit * 3;
+    }
+
+    .navigation__opener {
+        @include font-size(14px);
+        margin: 4em 0 0;
+    }
+
+    .navigation__dropdown {
+        background: $black;
+        padding: 2em 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .navigation__item {
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+    .navigation__dropdown-title {
+        @include font-size(18px);
     }
 
 }

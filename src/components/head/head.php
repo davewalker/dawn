@@ -13,6 +13,9 @@
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+    <script src="https://use.typekit.net/nry4eis.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
     <!--[if lte IE 9]>
     <script src="/jet2/dist/js/plugins/html5shiv.min.js"></script>
     <![endif]-->

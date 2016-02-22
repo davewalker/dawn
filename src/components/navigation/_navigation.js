@@ -1,14 +1,22 @@
-
-var navigation = {
-
-	$element: $('nav'),
+var Navigation = {
+	$dropdown: $('.navigation__dropdown'),
+	$trigger: $('.header__burger'),
 
 	init: function() {
-		console.log("nav loaded");
+		var self = this;
+
+		self.$trigger.on('click', function(e) {
+
+			self.$dropdown.slideToggle(400);
+
+		});
+
+
+
 	}
 
 };
 
-if(navigation.$element.length){
-    navigation.init();
+if (Navigation.$trigger) {
+	Navigation.init();
 }
