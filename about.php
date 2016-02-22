@@ -52,7 +52,26 @@
 </div>
 
 <aside class="main-content main-content--narrow contact-information fixed-panel--l-only">
-    <?php include 'src/components/contact-information/contact-information.php'; ?>
+
+    <div class="bm--x2">
+        <p>Our approach is to surround ourselves with really smart and enthusiastic
+        people. Learn with them, grow with them and celebrate every individual
+        achievement. We acknowledge how sole milestones are the stepping stones
+        towards reaching greater goals together.</p>
+        <p>Each person knows something you don't. We don’t fear it, we embrace it!
+        We contribute knowing everyone has the power to shape our collective
+        intention, value and vision. Want in…? You’ll have to leave your ego at the
+        door.</p>
+    </div>
+
+    <div class="bm--x2">
+        <p>For us, design isn’t result orientated, it’s about the solution. And,
+        beyond all of the above, leaving a lasting impression to be proud of.</p>
+        <p>We started with one simple intention; Create a collaborative environment
+        like no other. No company or agency bullshit, just a focus on human centred
+        design to surface the best ideas.</p>
+    </div>
+    
 </aside>
 
 <div class="clearfix"></div>
